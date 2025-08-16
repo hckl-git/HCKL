@@ -1,0 +1,64 @@
+/* HCKL – site-specific polish (kept lean for performance) */
+:root {
+  --ring: 0 0% 100%;
+  --hckl-red: #E53945;
+  --hckl-red-dark: #B92532;
+}
+
+/* Smooth anchor scroll */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Better focus rings for keyboard users */
+:where(a, button, [role="button"], summary):focus-visible {
+  outline: 2px solid var(--hckl-red);
+  outline-offset: 2px;
+}
+
+/* Remove default triangle, add custom icon via mask */
+summary::-webkit-details-marker { display: none; }
+summary::after {
+  content: "";
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-inline-start: 0.5rem;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.5 6l4.5 4 4.5-4H3.5z'/%3E%3C/svg%3E") no-repeat center/contain;
+          mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.5 6l4.5 4 4.5-4H3.5z'/%3E%3C/svg%3E") no-repeat center/contain;
+  transition: transform 200ms ease;
+}
+details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+/* Subtle card hover */
+.hover-card {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.hover-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px -10px rgba(0,0,0,.25);
+}
+
+/* Gradient text helper (updated to red theme) */
+.gradient-text {
+  background: linear-gradient(90deg, var(--hckl-red), #F87171, #FECACA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Override Tailwind emerald buttons/links with red */
+.bg-emerald-500 { background-color: var(--hckl-red) !important; }
+.hover\:bg-emerald-400:hover { background-color: var(--hckl-red-dark) !important; }
+.text-emerald-400 { color: var(--hckl-red) !important; }
+.focus-visible\:outline-emerald-400:focus-visible { outline-color: var(--hckl-red) !important; }
+.decoration-emerald-500\/40 { text-decoration-color: color-mix(in srgb, var(--hckl-red) 40%, transparent) !important; }
+.hover\:decoration-emerald-400:hover { text-decoration-color: var(--hckl-red) !important; }
+
+/* Prevent tap highlight on mobile UI elements */
+@media (pointer: coarse) {
+  a, button, [role="button"], summary { -webkit-tap-highlight-color: transparent; }
+}

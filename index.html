@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HCKL</title>
+  <meta name="description" content="HCKL is a non-profit bringing students into tech through inclusive hackathons and competitions with real prizes, mentorship, and industry partnerships. Fiscally supported by HCB." />
+  <meta property="og:title" content="HCKL — Student Tech Hackathons & Competitions" />
+  <meta property="og:description" content="Join HCKL hackathons, learn by building, win prizes, and meet peers and mentors. Fiscally supported by HCB." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#22c55e" />
+
+  <!-- Tailwind CDN (locked minor version for stability) -->
+  <script src="https://cdn.tailwindcss.com/3.4.10"></script>
+
+  <!-- Site-specific CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60 bg-slate-950/90 border-b border-white/10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#" class="flex items-center gap-2 font-semibold tracking-tight">
+          <img src="./assets/HCKL.png" alt="HCKL Logo" class="h-10 w-10" />
+          <span class="text-lg">HCKL</span>
+        </a>
+
+        <nav aria-label="Primary" class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#about" class="hover:text-emerald-400">About</a>
+          <a href="#events" class="hover:text-emerald-400">Events</a>
+          <a href="#prizes" class="hover:text-emerald-400">Prizes</a>
+          <a href="#faq" class="hover:text-emerald-400">FAQ</a>
+          <a href="#contact" class="hover:text-emerald-400">Contact</a>
+          <a href="#get-involved" class="inline-flex items-center rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-slate-950 hover:bg-emerald-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-400">
+            Get Involved
+          </a>
+        </nav>
+
+        <!-- Mobile menu (no JS; details/summary) -->
+        <details class="md:hidden relative">
+          <summary class="list-none inline-flex items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-sm hover:bg-white/5 cursor-pointer">
+            Menu
+          </summary>
+          <div class="absolute right-0 mt-2 w-56 rounded-xl border border-white/10 bg-slate-900/95 p-2 shadow-xl">
+            <a href="#about" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">About</a>
+            <a href="#events" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">Events</a>
+            <a href="#prizes" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">Prizes</a>
+            <a href="#faq" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">FAQ</a>
+            <a href="#contact" class="block rounded-lg px-3 py-2 text-sm hover:bg-white/5">Contact</a>
+            <a href="#get-involved" class="mt-2 block rounded-lg bg-emerald-500 px-3 py-2 text-sm font-semibold text-slate-950 hover:bg-emerald-400">Get Involved</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-30 [mask-image:radial-gradient(60%_60%_at_50%_40%,black,transparent)]">
+      <div class="pointer-events-none absolute -top-24 left-1/2 h-[38rem] w-[38rem] -translate-x-1/2 rounded-full bg-gradient-to-tr from-emerald-500 via-cyan-400 to-indigo-500 blur-3xl"></div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+      <div class="grid items-center gap-12 lg:grid-cols-2">
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">
+            Fiscally supported by <span class="font-semibold text-white">HCB</span>
+          </p>
+
+          <h1 class="mt-4 text-4xl font-black tracking-tight sm:text-6xl">
+            Build. Learn. <span class="gradient-text">Win.</span>
+          </h1>
+          <p class="mt-4 text-lg text-slate-300">
+            HCKL is a non-profit that helps students break into tech through inclusive hackathons and competitions.
+            Make your visions come true.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#events" class="inline-flex items-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950 hover:bg-emerald-400">Join an Event</a>
+            <a href="#partners" class="inline-flex items-center rounded-xl border border-white/15 px-5 py-3 font-semibold hover:bg-white/5">Become a Member</a>
+          </div>
+
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[16/10] rounded-2xl border border-white/10 bg-gradient-to-tr from-slate-900 to-slate-800 p-2 shadow-2xl">
+            <div class="grid h-full w-full grid-cols-2 gap-2">
+              <div class="rounded-xl bg-slate-900/80 p-4 hover-card">
+                <h3 class="text-sm font-semibold">Competetive Programming</h3>
+                <p class="mt-1 text-xs text-slate-400">Love algorithmic thinking? Want to prepare for the MCC's or the MCO? Join any KLCC event hosted by partnered schools.</p>
+              </div>
+              <div class="rounded-xl bg-slate-900/80 p-4 hover-card">
+                <h3 class="text-sm font-semibold">YSWS</h3>
+                <p class="mt-1 text-xs text-slate-400">Programming can be daunting, and if you need a kickstart? We support it!</p>
+              </div>
+              <div class="rounded-xl bg-slate-900/80 p-4 hover-card">
+                <h3 class="text-sm font-semibold">Hackathons</h3>
+                <p class="mt-1 text-xs text-slate-400">You got an idea? Make it!</p>
+              </div>
+              <div class="rounded-xl bg-slate-900/80 p-4 hover-card">
+                <h3 class="text-sm font-semibold">Teamwork</h3>
+                <p class="mt-1 text-xs text-slate-400">Programming is not a solo event, join competitions with teams and win big.</p>
+              </div>
+            </div>
+          </div>
+          <p class="mt-3 text-center text-xs text-slate-400">Made for students, by students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <h2 class="text-3xl font-bold sm:text-4xl">What is HCKL?</h2>
+        <p class="mt-4 text-slate-300">
+          We’re a student-first community. Our mission is to lower the barrier to tech by learning through building.
+          HCKL operates as a non-profit and is fiscally supported by <span class="font-semibold text-white">HCB</span>.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover-card">
+          <div class="text-emerald-400 font-semibold">Hackathons</div>
+          <p class="mt-2 text-sm text-slate-300">Bring your ideas from the drawing board to a shipped product, and win some prizes while doing it!</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover-card">
+          <div class="text-emerald-400 font-semibold">Events</div>
+          <p class="mt-2 text-sm text-slate-300">Hands-on competetive programming, work in teams or individually to hone your skill.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover-card">
+          <div class="text-emerald-400 font-semibold">Inclusive</div>
+          <p class="mt-2 text-sm text-slate-300">Beginner-friendly rules, accessibility-minded venues, and travel stipends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section id="events" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <h2 class="text-3xl font-bold sm:text-4xl">Upcoming & Recent Events</h2>
+          <p class="mt-2 text-slate-300">Join any one of these events to garner some experience!</p>
+        </div>
+      
+      </div>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6 hover-card">
+          <h3 class="text-lg font-semibold">Coming Soon!</h3>
+          <p class="mt-1 text-sm text-slate-300">Stay tuned! We have events cooking in the pot.</p>
+          <ul class="mt-3 list-disc ms-5 text-sm text-slate-300">
+            <li>Stay</li>
+            <li>Tuned</li>
+            <li>Coming Soon!</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6 hover-card">
+          <h3 class="text-lg font-semibold">Coming Soon!</h3>
+          <p class="mt-1 text-sm text-slate-300">Stay tuned! We have events cooking in the pot.</p>
+          <ul class="mt-3 list-disc ms-5 text-sm text-slate-300">
+            <li>Stay</li>
+            <li>Tuned</li>
+            <li>Coming Soon!</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-6 hover-card">
+          <h3 class="text-lg font-semibold">Coming Soon!</h3>
+          <p class="mt-1 text-sm text-slate-300">Stay tuned! We have events cooking in the pot.</p>
+          <ul class="mt-3 list-disc ms-5 text-sm text-slate-300">
+            <li>Stay</li>
+            <li>Tuned</li>
+            <li>Coming Soon!</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prizes / What you win -->
+  <section id="prizes" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div>
+          <h2 class="text-3xl font-bold sm:text-4xl">Prizes that make you want more!</h2>
+          <p class="mt-2 text-slate-300">
+            Beyond simply money, HCKL offers an array of unique prizes at each of our events that keep you striving to learn and improve or are just plain interesting to win!
+          </p>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div class="text-sm font-semibold text-emerald-400">Hardware</div>
+              <div class="text-sm text-slate-300">Win an oppurtunity to work on your hardware skills by recieving ESP-32's and Arduino's!</div>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div class="text-sm font-semibold text-emerald-400">General Tech</div>
+              <div class="text-sm text-slate-300">Need a new mechanical keyboard? Maybe a headset? You gotta earn it!</div>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div class="text-sm font-semibold text-emerald-400">Vouchers</div>
+              <div class="text-sm text-slate-300">Need some credit for some new furniture? Or really itching to buy a game?</div>
+            </div>
+            <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div class="text-sm font-semibold text-emerald-400">Connections</div>
+              <div class="text-sm text-slate-300">Sometimes its not about the material things! Connect and learn together.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <!-- <section id="partners" class="py-16">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+    </div>
+  </section> -->
+
+  <!-- Get Involved -->
+  <section id="get-involved" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex justify-center">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+            <h3 class="text-2xl font-bold">Students</h3>
+            <p class="mt-2 text-slate-300">Sign up to be part of HCKL's staff and help your community improve!</p>
+            <ul class="mt-4 list-disc ms-5 text-sm text-slate-300">
+            <li>No prior experience required</li>
+            <li>Open positions for tech & non-tech areas</li>
+            <li>Fun experiences with other like-minded individuals</li>
+            </ul>
+            <a href="#contact" class="mt-5 inline-flex rounded-xl bg-emerald-500 px-4 py-2 font-semibold text-slate-950 hover:bg-emerald-400">Sign up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold sm:text-4xl text-center">Frequently Asked Questions</h2>
+
+      <div class="mt-8 space-y-3">
+        <details class="rounded-xl border border-white/10 bg-white/5 p-4">
+          <summary class="cursor-pointer select-none text-base font-semibold">Who can join?</summary>
+          <p class="mt-3 text-sm text-slate-300">Any individual under-18 is welcome! We aim to open this space for those who are new or experienced to the field.</p>
+        </details>
+
+        <details class="rounded-xl border border-white/10 bg-white/5 p-4">
+          <summary class="cursor-pointer select-none text-base font-semibold">Is it beginner-friendly?</summary>
+          <p class="mt-3 text-sm text-slate-300">Yes. A guide will be provided on events in the event that a participant is completely new and the restriction of the usage of AI is lenient.</p>
+        </details>
+
+        <details class="rounded-xl border border-white/10 bg-white/5 p-4">
+          <summary class="cursor-pointer select-none text-base font-semibold">How are YSWS judged?</summary>
+          <p class="mt-3 text-sm text-slate-300">Originality, relevancy to the theme and how a developer showcases their project.</p>
+        </details>
+
+        <details class="rounded-xl border border-white/10 bg-white/5 p-4">
+          <summary class="cursor-pointer select-none text-base font-semibold">What does HCB support cover?</summary>
+          <p class="mt-3 text-sm text-slate-300">HCB acts as our fiscal sponsor to process donations, reimburse expenses, and ensure transparent accounting.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 sm:py-28">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-8">
+        <h2 class="text-3xl font-bold sm:text-4xl">Contact & Registration</h2>
+        <p class="mt-2 text-slate-300">Ready to become a member? Reach out with your skillset and we'll get back to you!</p>
+
+        <div class="mt-6 grid gap-6 sm:grid-cols-2">
+          <div class="space-y-2">
+            <div class="text-sm text-slate-400">Email</div>
+            <a href="mailto:hello@hckl.org" class="text-slate-100 underline decoration-emerald-500/40 underline-offset-4 hover:decoration-emerald-400">hello@hckl.org</a>
+          </div>
+          <div class="space-y-2">
+            <div class="text-sm text-slate-400">Social</div>
+            <div class="flex gap-3">
+              <a href="#" aria-label="HCKL on Instagram" class="rounded-lg border border-white/10 px-3 py-1 text-sm hover:bg-white/5">@hckl_org</a>
+              <a href="https://github.com/hckl-git" aria-label="HCKL on GitHub" class="rounded-lg border border-white/10 px-3 py-1 text-sm hover:bg-white/5">github.com/hckl-git</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="mt-8 grid gap-4 sm:grid-cols-2" action="#" method="post" aria-labelledby="contact-form-title">
+          <h3 id="contact-form-title" class="sr-only">Quick contact form</h3>
+          <div class="sm:col-span-1">
+            <label for="name" class="block text-sm text-slate-300">Name</label>
+            <input id="name" name="name" required autocomplete="name" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Your full name" />
+          </div>
+          <div class="sm:col-span-1">
+            <label for="email" class="block text-sm text-slate-300">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email" class="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="you@example.com" />
+          </div>
+          <div class="sm:col-span-2">
+            <label for="message" class="block text-sm text-slate-300">Message</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 w-full rounded-xl border border-white/10 bg-slate-900 px-3 py-2 text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500" placeholder="Tell us how you’d like to get involved…"></textarea>
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="inline-flex items-center rounded-xl bg-emerald-500 px-5 py-3 font-semibold text-slate-950 hover:bg-emerald-400">Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <p class="text-sm text-slate-400">© <span id="y"></span> HCKL is fiscally sponsored by Hack Club, a 501(c)(3) nonprofit. Our registered EIN is 81-2908499.</p>
+        <nav class="flex gap-4 text-sm text-slate-400">
+          <a href="#faq" class="hover:text-emerald-400">FAQ</a>
+          <a href="#contact" class="hover:text-emerald-400">Contact</a>
+          <a href="#partners" class="hover:text-emerald-400">Partners</a>
+        </nav>
+      </div>
+    </div>
+    <script>
+      // Lightweight year updater (no frameworks)
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
